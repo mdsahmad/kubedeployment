@@ -16,8 +16,8 @@ node {
                         bat 'git config user.name mdsahmad'
                         //sh "git switch master"
                         bat 'type deployment.yaml'
-                        // bat "sed -i \'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:${DOCKERTAG}+g\' deployment.yaml"
-                        powershell 'sed -i \\\'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:${DOCKERTAG}+g\\\' deployment.yaml'
+                        bat "sed -i \'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:${DOCKERTAG}+g\' deployment.yaml"
+                        // powershell 'sed -i \\\'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:${DOCKERTAG}+g\\\' deployment.yaml'
                         bat 'type deployment.yaml'
                         bat 'git add .'
                         bat 'git commit -m "Done by Jenkins Job changemanifest"'
