@@ -14,6 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    echo $(Build.BuildId)
     cat deployment.yaml
     sed -i \'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:$(Build.BuildId)+g\' deployment.yaml
     cat deployment.yaml
