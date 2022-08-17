@@ -15,6 +15,6 @@ steps:
 
 - script: |
     cat deployment.yaml
-    sed -i \'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:${DOCKERTAG}+g\' deployment.yaml
+    sed -i \'s+shahidahmad/pythontestapp.*+shahidahmad/pythontestapp:$(Build.BuildId)+g\' deployment.yaml
     cat deployment.yaml
   displayName: 'Run a multi-line script'
